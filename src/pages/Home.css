@@ -1,0 +1,27 @@
+.bg-clear-day {
+     background-image: linear-gradient(to bottom, #22d3ee, #06b6d4);
+   }
+.bg-clear-night {
+     background-image: linear-gradient(to bottom, #27272a, #1A202C);
+}
+.bg-cloudy-day {
+     background-image: linear-gradient(to bottom, #7dd3fc, #22d3ee);
+}
+.bg-cloudy-night {
+     background-image: linear-gradient(to bottom, #6b7280 , #4b5563 );
+}
+.bg-drizzle {
+     background-image: linear-gradient(to bottom, #a8a29e, #57534e );
+}
+.bg-drizzle {
+     background-image: linear-gradient(to bottom, #a8a29e, #57534e );
+}
+.bg-thunderstorm {
+     background-image: linear-gradient(to bottom, #172554,#09090b );
+}
+.bg-snow-day{
+     background-image: linear-gradient(to bottom,#cbd5e1 ,#d1d5db );
+}
+.bg-snow-night {
+     background-image: linear-gradient(to bottom, #6b7280 , #4b5563 );
+}
