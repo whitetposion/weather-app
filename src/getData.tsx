@@ -1,3 +1,4 @@
+import { Coordinates } from "./types";
 export const geoApiOptions = {
      method: "GET",
      headers: {
@@ -10,7 +11,7 @@ export const geoApiOptions = {
 export const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo"; 
 export const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
-const API_KEY = "2e08761ae61f065239ac9048c1439c70"
+//const API_KEY = "2e08761ae61f065239ac9048c1439c70"
 
 export const getLocation = (): Promise<Coordinates | null> => {
      return new Promise((resolve, reject) => {
@@ -46,7 +47,7 @@ export const getCityWeather = async (latitude:number, longitude:number, metrics:
                "weather": [
                    {
                        "id": 800,
-                       "main": "Thunderstorm",
+                       "main": "Clear",
                        "description": "साफ आकाश",
                        "icon": "01n"
                    }

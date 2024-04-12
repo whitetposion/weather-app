@@ -1,6 +1,7 @@
 import React,{ useEffect, useState } from 'react'
 import { getCityWeather, getLocation } from '../getData';
 import { getSkyColor } from '../lib/utility';
+import { Coordinates } from '../types';
 import Herosection from '../components/Herosection';
 import "./Home.css"
 
@@ -38,7 +39,7 @@ const Home:React.FC = () => {
      return (
           <div className={`w-full h-full ${backgroundColor}`}
           >
-
+               <Herosection weatherData={data}/>
           </div>
      )
 }
