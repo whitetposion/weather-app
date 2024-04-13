@@ -1,9 +1,10 @@
 import React,{ useEffect, useState } from 'react'
-import { getCityWeather, getLocation } from '../getData';
-import { getSkyColor } from '../lib/utility';
-import { Coordinates } from '../types';
-import Herosection from '../components/Herosection';
+import { getCityWeather, getLocation } from '../../getData';
+import { getSkyColor } from '../../lib/utility';
+import { Coordinates } from '../../types';
+import Herosection from '../../components/Herosection';
 import "./Home.css"
+import Searchbar from '../../components/Searchbar';
 
 
 const Home:React.FC = () => {
@@ -35,11 +36,11 @@ const Home:React.FC = () => {
           };
           cityWeather()
      }, [coordinates]);
-     // for clear and day
      return (
           <div className={`w-full h-full ${backgroundColor}`}
           >
                <Herosection weatherData={data}/>
+               <Searchbar/>
           </div>
      )
 }
