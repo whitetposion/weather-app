@@ -42,10 +42,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ weatherData }) => {
                               <div className=''>{weatherData.main.humidity}%</div>
                          </div>
                     </div>
-                    {/* <div className="text-lg mt-4">{weatherData?.weather[0].description}</div> */}
                </div>
           </div>
      );
+     else {
+          return (
+               <div className='w-full flex justify-center pt-10 h-1/4'>
+                    <div className='relative w-[80%] flex justify-center items-center text-center rounded-md bg-opacity-25 backdrop-blur-xl bg-gray-400 text-white text-4xl shadow-md'>
+                         Oops Something went wrong !
+                    </div>
+               </div>
+          )
+     }
 };
 
 export default HeroSection;

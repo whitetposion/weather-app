@@ -5,12 +5,13 @@ import { Coordinates } from '../../types';
 import Herosection from '../../components/Herosection';
 import "./Home.css"
 import Searchbar from '../../components/Searchbar';
+import CitiesTable from '../../components/CitiesTable';
 
 
 const Home:React.FC = () => {
      const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
      const [data, setData] = useState(null)
-     const [backgroundColor, setBackgroundColor] = useState<string>("")
+     const [backgroundColor, setBackgroundColor] = useState<string>("bg-gray-700")
      
      useEffect(() => {
           const askForLocation = async () => {
@@ -41,6 +42,7 @@ const Home:React.FC = () => {
           >
                <Herosection weatherData={data}/>
                <Searchbar/>
+               <CitiesTable/>
           </div>
      )
 }
