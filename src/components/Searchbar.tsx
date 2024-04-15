@@ -25,7 +25,7 @@ interface GeoApiResponse {
 const SearchBar: React.FC = () => {
      const navigate = useNavigate()
      const [query, setQuery] = useState<LocationSuggestion>({label: "", value : ""});
-     const debouncedSearchTerm = useDebounce(query.label, 1000);
+     const debouncedSearchTerm = useDebounce(query.label, 500);
      const [suggestions, setSuggestions] = useState<LocationSuggestion[]>([]);
 
      const handleClick = () => {
@@ -85,7 +85,7 @@ const SearchBar: React.FC = () => {
                          {suggestions.map((suggestion,index) => (
                          <li
                               key={index}
-                              className="p-2 hover:bg-white hover:opacity-25 text-white rounded-sm cursor-pointer"
+                              className="p-2 hover:bg-white hover:text-black hover:opacity-25 text-white rounded-sm cursor-pointer"
                               onClick={() => {
                                    setQuery(suggestion);
                                    setSuggestions([]);
