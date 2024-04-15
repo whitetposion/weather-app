@@ -30,7 +30,7 @@ const SearchBar: React.FC = () => {
 
      const handleClick = () => {
           if (query.value == "") return  
-          const [lon , lat] = query.value.split(" ")
+          const [lat , lon] = query.value.split(" ")
           navigate(`/${lon}/${lat}`)
      }
      const loadOptions = async (inputValue: string): Promise<{ value: string; label: string }[]> => {

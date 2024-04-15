@@ -64,9 +64,9 @@ const CitiesTable: React.FC = () => {
                               {cities.map((city, index) => (
                               <tr 
                                    key={index} 
-                                   onContextMenu = {()=>window.open(`${origin}/lon=${city.coordinates.lon}/lat=${city.coordinates.lat}`, '_blank', 'noopener, noreferrer')
+                                   onContextMenu = {()=>window.open(`${origin}/${city.coordinates.lon}/${city.coordinates.lat}`, '_blank', 'noopener, noreferrer')
                               } 
-                                   onClick={()=> navigate(`/lon=${city.coordinates.lon}/lat=${city.coordinates.lat}`)}
+                                   onClick={()=> navigate(`/${city.coordinates.lon}/${city.coordinates.lat}`)}
                                    className='hover:bg-white hover:opacity-25 hover:text-black'
                               >
                                    <td className='p-4 md:px-8 text-left'>{city.name}</td>
